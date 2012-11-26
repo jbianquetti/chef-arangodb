@@ -1,4 +1,0 @@
-chef-arangodb
-=============
-
-ArangoDB  cookbook 
