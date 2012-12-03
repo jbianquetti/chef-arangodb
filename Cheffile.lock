@@ -1,0 +1,19 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (1.5.0)
+    chef_handler (1.0.8)
+    minitest-handler (0.1.2)
+      chef_handler (>= 0.0.0)
+
+PATH
+  remote: /home/jbianquetti/trabajo/github/chef-arangodb
+  specs:
+    arangodb (0.0.1)
+
+DEPENDENCIES
+  apt (>= 0)
+  arangodb (>= 0)
+  chef_handler (>= 0)
+  minitest-handler (>= 0)
+

@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt' # Helper to work with apt 
+cookbook 'minitest-handler'
+cookbook 'chef_handler'
+cookbook 'arangodb', :path => '/home/jbianquetti/trabajo/github/chef-arangodb'
+
+#cookbook 'arangodb', 
+#	:git => "arangodb",
+#	:ref => "devel"
+
+# cookbook 'apache2', '>= 1.0.0'
+
+# cookbook 'rvm',
+#   :git => 'https://github.com/fnichol/chef-rvm'
+
+# cookbook 'postgresql',
+#   :git => 'https://github.com/findsyou/cookbooks',
+#   :ref => 'postgresql-improvements'
