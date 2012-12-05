@@ -15,3 +15,8 @@ end
 package "arangodb" do
   action :upgrade
 end 
+
+service "arangodb" do
+  action [ :enable, :start ]
+   subscribes :restart, resources( :template => "#{node['arangodb']['config']}" ), :immediately if node['arangodb']['manage_config_file']
+end
