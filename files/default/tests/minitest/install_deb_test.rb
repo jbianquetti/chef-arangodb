@@ -13,6 +13,10 @@ describe_recipe 'arangodb::install_deb' do
       package("arangodb").must_be_installed 
     end
    end 
-
+  describe "service arangod" do
+   it "service arangodb must be running" do
+    service("arangod").must_be_running
+   end
+  end
 
 end  

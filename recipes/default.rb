@@ -1,2 +1,2 @@
 
-include_recipe "arangodb::repository"
+include_recipe "arangodb::install_deb"

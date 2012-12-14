@@ -7,16 +7,16 @@ apt_repository "arangodb" do
   components ["main"]
   distribution ubu_release
   key "http://www.arangodb.org/repositories/PublicKey" 
-  action :add
+  action :create
 end
 
-# fails 'cause repo  don't have a i386 package
+# This can  fail 'cause remote  repo  don't have a i386 package
 # Must works with x86-84 bits 
 package "arangodb" do
   action :upgrade
 end 
 
-service "arangodb" do
+service "arangod" do
   action [ :enable, :start ]
    subscribes :restart, resources( :template => "#{node['arangodb']['config']}" ), :immediately if node['arangodb']['manage_config_file']
 end
